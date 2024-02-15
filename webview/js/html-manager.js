@@ -270,13 +270,13 @@ class HtmlManager {
         setTimeout(() => {
             let opacity = 1;
             const timer = setInterval(() => {
-                opacity -= 0.04;
+                opacity -= 0.1;
                 copiedPopup.style.opacity = opacity;
                 if (opacity <= 0) {
                     clearInterval(timer);
                     copiedPopup.remove();
                 }
-            }, 10);
+            }, 80);
         }, 300);
     }
 }
