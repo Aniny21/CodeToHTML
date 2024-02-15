@@ -2,10 +2,10 @@
   "name": "codetohtml",
   "displayName": "CodeToHTML",
   "description": "Convert source code to HTML, PDF and images with syntax highlighting",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "publisher": "Aniny",
   "engines": {
-    "vscode": "^1.86.0"
+    "vscode": "^1.50.0"
   },
   "license": "MIT",
   "icon": "icon.png",
@@ -44,7 +44,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.86.0",
+    "@types/vscode": "^1.50.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "18.x",
     "@typescript-eslint/eslint-plugin": "^6.19.1",

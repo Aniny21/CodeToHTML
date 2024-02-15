@@ -222,7 +222,17 @@ class HtmlManager {
                 html += '</code>';
             html += '</pre>';
         } else {
-            html += `<div style="${this.styleText} white-space: nowrap;">${codeDiv.innerHTML}</div>`;
+            const newCodeDiv = document.createElement('div');
+            newCodeDiv.innerHTML = codeDiv.innerHTML;
+            // TreeWalkerでspan内の空白を&nbsp;に変換
+            const walker = document.createTreeWalker(newCodeDiv, NodeFilter.SHOW_TEXT, null, false);
+            while (walker.nextNode()) {
+                const textNode = walker.currentNode;
+                if (textNode.parentNode.nodeName === 'SPAN') {
+                    textNode.textContent = textNode.textContent.replace(/ /g, '\u00a0');
+                }
+            }
+            html += `<div style="${this.styleText} white-space: nowrap;">${newCodeDiv.innerHTML}</div>`;
         }
         if (hasBody)
             html += '</body>\n</html>';

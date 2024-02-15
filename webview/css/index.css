@@ -2,6 +2,6 @@
     margin: auto !important;
     width: fit-content !important;
     max-width: 100% !important;
-    white-space: nowrap !important;
+    white-space: pre !important;
     overflow: auto !important;
 }
