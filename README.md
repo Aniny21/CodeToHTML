@@ -1,8 +1,12 @@
+<!-- GitHub README -->
 <picture>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Aniny21/CodeToHTML/main/demo/logo_light.png">
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Aniny21/CodeToHTML/main/demo/logo_dark.png">
   <img src="./demo/logo.png" alt="CodeToHTML_logo">
 </picture>
+
+<!-- Visual Studio Marketplace -->
+<!-- ![CodeToHTML_logo](./demo/logo.png) -->
 
 
 # Overview

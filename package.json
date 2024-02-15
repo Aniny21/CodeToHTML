@@ -2,7 +2,7 @@
   "name": "codetohtml",
   "displayName": "CodeToHTML",
   "description": "Convert source code to HTML, PDF and images with syntax highlighting",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "publisher": "Aniny",
   "engines": {
     "vscode": "^1.86.0"
