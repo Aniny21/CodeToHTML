@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CodeToHTML Settings</title>
+	<link rel="stylesheet" href="/css/lib/reset.css">
+	<link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/index.css">
+	<script defer src="/js/lib/bootstrap.min.js"></script>
+	<script defer src="/js/lib/jspdf.umd.min.js"></script>
+	<script defer src="/js/lib/html2canvas.min.js"></script>
+	<script defer src="/js/lib/dom-to-image-more.min.js"></script>
+	<script defer src="/js/text-wrap.js"></script>
+	<script defer src="/js/html-to-pdf.js"></script>
+	<script defer src="/js/html-manager.js"></script>
+	<script defer src="/js/index.js"></script>
+</head>
+
+<body>
+	<div id="main-container">
+		<div class="d-flex align-items-center justify-content-start">
+			<h1 style="width: 180px;">Code To</h1>
+			<select class="form-select form-select-lg fs-3" id="codeToTargetSelect" aria-label=".form-select">
+				<option value="html" selected>HTML</option>
+				<option value="pdf">PDF</option>
+				<option value="image">Image</option>
+			</select>
+		</div>
+		<div class="m-4" id="settings">
+			<div class="code-to-target" id="codeToHtml">
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Structure&nbsp;:</h3>
+					<select class="form-select" id="structureSelect" aria-label=".form-select">
+						<option value="html>body>div" selected>html > body > div</option>
+						<option value="html>body>pre">html > body > pre</option>
+						<option value="html>body>pre>code">html > body > pre > code</option>
+						<option value="div">div</option>
+						<option value="pre">pre</option>
+						<option value="pre>code">pre > code</option>
+					</select>
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Text Wrap&nbsp;:</h3>
+					<select class="form-select text-wrap-select" aria-label=".form-select">
+						<option value="none" selected>None</option>
+						<option value="normal">Normal</option>
+						<option value="smart">Smart</option>
+					</select>
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Max Length&nbsp;:</h3>
+					<input type="number" class="form-control max-length-input" value="100">
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-center mt-3">
+					<button class="btn btn-primary container-fluid" id="downloadHtmlButton">Download</button>
+					<div class="me-5"></div>
+					<button class="btn btn-primary container-fluid" id="copyHtmlButton">Copy</button>
+				</div>
+			</div>
+
+
+			<div class="code-to-target d-none" id="codeToPdf">
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Font(.ttf)&nbsp;:</h3>
+					<input type="file" class="form-control" id="fontFileInput" accept=".ttf">
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Text Wrap&nbsp;:</h3>
+					<select class="form-select text-wrap-select" aria-label=".form-select">
+						<option value="none" selected>None</option>
+						<option value="normal">Normal</option>
+						<option value="smart">Smart</option>
+					</select>
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Max Length&nbsp;:</h3>
+					<input type="number" class="form-control max-length-input" value="100">
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-center mt-3">
+					<button class="btn btn-primary container-fluid" id="downloadPdfButton">Download</button>
+				</div>
+			</div>
+
+			<div class="code-to-target d-none" id="codeToImage">
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Image Type&nbsp;:</h3>
+					<select class="form-select" id="imageTypeSelect" aria-label=".form-select">
+						<option value="png" selected>PNG</option>
+						<option value="jpeg">JPEG</option>
+						<option value="svg">SVG</option>
+					</select>
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Text Wrap&nbsp;:</h3>
+					<select class="form-select text-wrap-select" aria-label=".form-select">
+						<option value="none" selected>None</option>
+						<option value="normal">Normal</option>
+						<option value="smart">Smart</option>
+					</select>
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-start">
+					<h3 style="width: 200px;">Max Length&nbsp;:</h3>
+					<input type="number" class="form-control max-length-input" value="100">
+				</div>
+				<div class="m-2"></div>
+				<div class="d-flex align-items-center justify-content-center mt-3">
+					<button class="btn btn-primary container-fluid" id="downloadImageButton">Download</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ここに後からハイライトされたHTMLを挿入する -->
+	<!-- [CodeToHTML] PLACEHOLDER DO NOT REMOVE -->
+</body>
+
+</html>

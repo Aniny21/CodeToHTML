@@ -1,0 +1,7 @@
+#codeDiv {
+    margin: auto !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    overflow: auto !important;
+}

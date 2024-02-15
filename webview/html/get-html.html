@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Text</title>
+</head>
+
+<body>
+    <script>
+        const vscode = acquireVsCodeApi();
+        window.addEventListener('paste', (event) => {
+            const html = parseHTML(event.clipboardData.getData('text/html'));
+            vscode.postMessage({ command: 'getHTML', result: html });
+        });
+        window.addEventListener('message', (event) => {
+            if (event.data.command === 'getHTML') {
+                document.execCommand('paste');
+            }
+        });
+        function parseHTML(html) {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            return doc.body.innerHTML;
+        }
+    </script>
+</body>
+
+</html>
