@@ -8,6 +8,7 @@
 <!-- Visual Studio Marketplace -->
 <!-- ![CodeToHTML_logo](./demo/logo.png) -->
 
+[日本語版(外部サイト) / Japanese version(external site)](https://www.tekutechlabo.com/2024/02/code-to-html.html)
 
 # Overview
 CodeToHTML is a Visual Studio Code extension that allows you to convert source code to HTML, PDF and images with syntax highlighting.
